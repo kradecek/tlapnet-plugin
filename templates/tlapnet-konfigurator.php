@@ -24,7 +24,7 @@
       <h2 class="tksum-heading">Shrnutí</h2>         
           <div class="tksum" ng-if="payments.totalPayments">
             
-            <div ng-repeat="service in services">
+            <div ng-repeat="service in data.services">
               <div ng-if="service.selectedPackage != null">
                 <div class="tksbox">
                 <h3 ng-click="toggleService(service)">

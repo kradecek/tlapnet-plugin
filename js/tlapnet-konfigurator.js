@@ -10,16 +10,25 @@ var ngTlapnetKonfigurator = angular.module('TlapnetKonfigurator', ['ui.bootstrap
 });
 
  
-ngTlapnetKonfigurator.factory('theService', function($http) {
-  var services = [];
+ngTlapnetKonfigurator.factory('theService', function($http, $location) {
+  var data = {services : [], loaded : false};
   
   initData = function (services) {
     angular.forEach(services, function(service) {
       service.selectedPackage = null;
+      if ($location.search().service === service.Id) {
+        service.open = true;
+      }
       angular.forEach(service.Tariffs, function(tariff) {
+        if ($location.search().tariff === tariff.Id) {
+          tariff.visible = true;
+        }
         tariff.parent = service;
         angular.forEach(tariff.Packages, function(package) {
           package.selectedChannels = {};
+          if ($location.search().package === package.Id) {
+            service.selectedPackage = package;
+          }
           package.parent = tariff;
           angular.forEach(package.Prices, function(price) {
             if (price.Type === 'BEZNA_CENA') {
@@ -42,13 +51,14 @@ ngTlapnetKonfigurator.factory('theService', function($http) {
       subscription: false
     },
     getServices: function(callback) { 
-      if (services.length > 0) {
-        return callback(services);
+      if (data.loaded) {
+        return callback(data);
       }
+      data.loaded = true;
       $http({method: 'GET', url: TLAPNET_KONFIGURATOR_PLUGIN_URL + '/data/services.json'}).
-        success(function(data, status) {
-          initData(data);
-          services = data;
+        success(function(services, status) {
+          initData(services);
+          data.services = services;
           callback(data);
         }).
         error(function(data, status) {
@@ -72,7 +82,8 @@ function TlapnetKonfiguratorCtrl($scope, theService) {
   $scope.payments = theService.payments;
   
   theService.getServices(function(data){
-    $scope.services = data;
+    $scope.data = data;
+    $scope.sumPayments();
   });
   
   $scope.shoppingCart = [];
@@ -148,7 +159,7 @@ function TlapnetKonfiguratorCtrl($scope, theService) {
     $scope.setSalePrices();
     $scope.payments.monthlyPayments = 0;
     
-    angular.forEach($scope.services, function(service) {
+    angular.forEach($scope.data.services, function(service) {
       if (service.selectedPackage !== null) {
         $scope.payments.monthlyPayments += parseInt(service.selectedPackage.salePrice.MonthlyPayment);
         angular.forEach(service.selectedPackage.selectedChannels, function(channel) {
@@ -161,7 +172,7 @@ function TlapnetKonfiguratorCtrl($scope, theService) {
   
   $scope.setSalePrices = function () {
     var selectedPackages = [];
-    angular.forEach($scope.services, function(service) {
+    angular.forEach($scope.data.services, function(service) {
       if (service.selectedPackage !== null) {
         selectedPackages.push(service.selectedPackage);
       }

@@ -1,5 +1,5 @@
 <div accordion close-others="false">
-  <div accordion-group ng-repeat="service in services" is-open="service.open" class="tscount{{service.Tariffs.length}}">
+  <div accordion-group ng-repeat="service in data.services" is-open="service.open" class="tscount{{service.Tariffs.length}}">
     <div class="tscount{{service.Tariffs.length}}">
       <div accordion-heading>
         <span class="open-{{service.open}}" ng-click="toggleService(service)"><em class="ui-icon"></em> {{service.Name}}</span>
