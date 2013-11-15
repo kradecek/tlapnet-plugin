@@ -46,7 +46,8 @@
 
 <h2>Cena celkem</h2>
 
-<strong>Měsíčně: </strong><?= $payments['monthlyPayments'] ?>,- Kč<br />
-<strong>Celkem: </strong><?= $payments['totalPayments'] ?>,- Kč<br />
-
-Není započítána cena instalace. Liší se individuálně. Ceny jsou uvedeny s DPH.
+<p>
+<strong>Celkem měsíčně: </strong><?= $payments['monthlyPayments'] ?>,- Kč<br />
+<strong>Celkem cena za 12 měsíců: </strong><?= ($payments['totalPayments'])*12 ?>,- Kč
+</p>
+<p>Není započítána cena instalace. Ceny jsou uvedeny s DPH. </p>
