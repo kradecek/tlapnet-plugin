@@ -27,6 +27,7 @@ ngTlapnetKonfigurator.factory('theService', function($http, $location) {
         angular.forEach(tariff.Packages, function(package) {
           package.selectedChannels = {};
           if ($location.search().package === package.Id) {
+            package.selected = true;
             service.selectedPackage = package;
           }
           package.parent = tariff;
