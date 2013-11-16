@@ -1,4 +1,4 @@
-[
+globalServices = [
   {
     "Id" : "INTERNET",
     "Name": "Internet",
@@ -634,4 +634,4 @@
       }
     ]
   }
-]
+];

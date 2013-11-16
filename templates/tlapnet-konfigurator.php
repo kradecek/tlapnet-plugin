@@ -11,6 +11,7 @@
   <!--[if lte IE 8]>
     <script src="<?= TLAPNET_KONFIGURATOR_PLUGIN_URL ?>js/json3.min.js"></script>
   <![endif]-->  
+  <script src="<?= TLAPNET_KONFIGURATOR_PLUGIN_URL ?>data/services.js?t=<?= time() ?>"></script>
   <script src="<?= TLAPNET_KONFIGURATOR_PLUGIN_URL ?>js/tlapnet-konfigurator.js?t=<?= time() ?>"></script>
  
   <form action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">

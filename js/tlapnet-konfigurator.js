@@ -11,7 +11,7 @@ var ngTlapnetKonfigurator = angular.module('TlapnetKonfigurator', ['ui.bootstrap
 
  
 ngTlapnetKonfigurator.factory('theService', function($http, $location) {
-  var data = {services : [], loaded : false};
+  var data = {services : []};
   
   initData = function (services) {
     angular.forEach(services, function(service) {
@@ -52,19 +52,9 @@ ngTlapnetKonfigurator.factory('theService', function($http, $location) {
       subscription: false
     },
     getServices: function(callback) { 
-      if (data.loaded) {
-        return callback(data);
-      }
-      data.loaded = true;
-      $http({method: 'GET', url: TLAPNET_KONFIGURATOR_PLUGIN_URL + '/data/services.json'}).
-        success(function(services, status) {
-          initData(services);
-          data.services = services;
-          callback(data);
-        }).
-        error(function(data, status) {
-          alert("Request failed! Status: " + status + '; Data: ' + data);
-      });
+      initData(globalServices);
+      data.services = globalServices;
+      callback(data);
     }
   };
 });
@@ -81,11 +71,6 @@ function TlapnetKonfiguratorCtrl($scope, theService) {
   };
   
   $scope.payments = theService.payments;
-  
-  theService.getServices(function(data){
-    $scope.data = data;
-    $scope.sumPayments();
-  });
   
   $scope.shoppingCart = [];
   
@@ -204,6 +189,11 @@ function TlapnetKonfiguratorCtrl($scope, theService) {
     });
     
   };
+  
+  theService.getServices(function(data){
+    $scope.data = data;
+    $scope.sumPayments();
+  });
   
   
 }
