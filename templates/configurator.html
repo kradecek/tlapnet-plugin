@@ -16,19 +16,19 @@
             <h3>{{package.Name}}</h3>
             <div class="tsdesc">{{package.Description}}</div>
             <div class="tsdown">
-              <div ng-if="service.Id=='INTERNET'">
+              <div ng-if="service.Id=='internet'">
                 <span ng-if="package.Speed">{{package.Speed}}</span>
               </div>
-              <div ng-if="service.Id=='TV'">
+              <div ng-if="service.Id=='tv'">
                 <span ng-if="package.Speed">{{package.Speed}}</span>
               </div>              
-              <div ng-if="service.Id=='PHONE'">
+              <div ng-if="service.Id=='phone'">
                 <span ng-if="package.Speed">{{package.Speed}}</span>
               </div>
               <strong ng-if="package.Download">{{package.Download}}</strong>
             </div> 
             <div class="tsupload">      
-              <div ng-if="service.Id=='PHONE'">
+              <div ng-if="service.Id=='phone'">
                 <span ng-if="package.Speedup">{{package.Speedup}}</span>              
               </div> 
             </div>
