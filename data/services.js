@@ -1,18 +1,18 @@
 globalServices = [
   {
-    "Id" : "INTERNET",
+    "Id" : "internet",
     "Name": "Internet",
     "Css": "s1",    
     "Description": "popis internetu",
     "Tariffs": [
       {
-        "Id" : "INTERNET_T1",
+        "Id" : "internett1",
         "Name": "Bezdrátové připojení",
         "Description": "Cenově dostupné připojení pro každého",
         "Notice": "Ceny jsou uvedeny s DPH.",
         "Packages": [
          {
-            "Id" : "1_A",
+            "Id" : "1a",
             "Name" : "Nespěchám",
             "Description" : "Ekonomické připojení pro nenáročné uživatele",
             "Speed": "rychlost stahování až",
@@ -41,7 +41,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "1_B",
+            "Id" : "1b",
             "Name" : "Nečekám",
             "Description" : "Vhodné pro kohokoliv, na cokoliv",
             "Speed": "rychlost stahování až",
@@ -70,7 +70,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "1_C",
+            "Id" : "1c",
             "Name" : "Nestíhám",
             "Description" : "Pro náročné uživatele, pro náročné datové přenosy",
             "Speed": "rychlost stahování až",
@@ -101,13 +101,13 @@ globalServices = [
         ]
       },
       {
-        "Id" : "INTERNET_T2",
+        "Id" : "internett2",
         "Name" : "Optické připojení",
         "Description": "Světelně rychlý internet",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
          {
-            "Id" : "2_A",
+            "Id" : "2a",
             "Name" : "Blikám",
             "Description" : "Vhodné pro méně náročné klienty",
             "Speed": "rychlost stahování a odesílání",
@@ -136,7 +136,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "2_B",
+            "Id" : "2b",
             "Name" : "Svítím",
             "Description" : "Rychlostní varianta, která stačí všem",
             "Speed": "rychlost stahování a odesílání",
@@ -165,7 +165,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "2_C",
+            "Id" : "2c",
             "Name" : "Zářím",
             "Description" : "Pro extrémně náročné datové přenosy",
             "Speed": "rychlost stahování a odesílání",
@@ -196,13 +196,13 @@ globalServices = [
         ]
       },
       {
-        "Id" : "INTERNET_T3",
+        "Id" : "internett3",
         "Name" : "Profi připojení",
         "Description": "Internet do firem, škol a obcí",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
          {
-            "Id" : "3_A",
+            "Id" : "3a",
             "Name" : "Profi Standard",
             "Description" : "Profesionální garantované připojení bez kontraktu",
             "Speed": "kontaktujte nás na",
@@ -211,27 +211,27 @@ globalServices = [
               {
                 "Type" : "BEZNA_CENA",
                 "Description" : "běžná cena",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE",
                 "Description" : "předplatné",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "BEZNA_CENA_V_BALICKU",
                 "Description" : "běžná cena balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE_V_BALICKU",
                 "Description" : "předplatné v balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               }
             ]
           },
            {
-            "Id" : "3_B",
+            "Id" : "3b",
             "Name" : "Profi 12",
             "Description" : "Profesionální garantované připojení na 12 měsíců",
             "Speed": "kontaktujte nás na",
@@ -240,27 +240,27 @@ globalServices = [
               {
                 "Type" : "BEZNA_CENA",
                 "Description" : "běžná cena",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE",
                 "Description" : "předplatné",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "BEZNA_CENA_V_BALICKU",
                 "Description" : "běžná cena balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE_V_BALICKU",
                 "Description" : "předplatné v balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               }
             ]
           },
           {
-            "Id" : "3_C",
+            "Id" : "3c",
             "Name" : "Profi 24",
             "Description" : "Profesionální garantované připojení na 24 měsíců",
             "Speed": "kontaktujte nás na",
@@ -269,35 +269,35 @@ globalServices = [
               {
                 "Type" : "BEZNA_CENA",
                 "Description" : "běžná cena",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE",
                 "Description" : "předplatné",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "BEZNA_CENA_V_BALICKU",
                 "Description" : "běžná cena balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE_V_BALICKU",
                 "Description" : "předplatné v balíčku",
-                "MonthlyPayment" : ""
+                "MonthlyPayment" : "1"
               }
             ]
           }
         ]
       },
       {
-        "Id" : "INTERNET_T4",
+        "Id" : "internett4",
         "Name" : "Mobilní připojení",
         "Description": "Pohodlné surfování kdykoliv a kdekoliv",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
          {
-            "Id" : "4_A",
+            "Id" : "4a",
             "Name" : "Mobilní připojení",
             "Description" : "Vhodné na emaily a prohlížení webu",
             "Speed": "FUP",
@@ -319,7 +319,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "4_B",
+            "Id" : "4b",
             "Name" : "Mobilní připojení Plus",
             "Description" : "Vhodné i pro náročnější klienty a jejich potřeby",
             "Speed": "FUP",
@@ -353,19 +353,19 @@ globalServices = [
     ]
   },
   {
-    "Id" : "TV",
+    "Id" : "tv",
     "Name": "Televize",
     "Css": "s2",
     "Description": "popis televize",
     "Tariffs": [
       {
-        "Id" : "TV_T1",
+        "Id" : "tvt1",
         "Name" : "TV SAT",
         "Description": "Satelitní příjem televizního signálu",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
           {
-            "Id" : "TV_1_A",
+            "Id" : "tv1a",
             "Name" : "Koukám",
             "Description" : "Základní nabídka programů",
             "Speed": "25 programů",
@@ -394,7 +394,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "TV_1_B",
+            "Id" : "tv1b",
             "Name" : "Zírám",
             "Description" : "Nabídka vhodná pro každého",
             "Speed": "67 programů",
@@ -423,7 +423,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "TV_1_C",
+            "Id" : "tv1c",
             "Name" : "Žasnu",
             "Description" : "Nabídka pro filmofily",
             "Speed": "95 programů",
@@ -454,13 +454,13 @@ globalServices = [
         ]
       },     
       {
-        "Id" : "TV_T2",
+        "Id" : "tvt2",
         "Name" : "TV IPTV",
         "Description": "Příjem televizního signálu po síti",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
           {
-            "Id" : "TV_2_A",
+            "Id" : "tv2a",
             "Name" : "Koukám",
             "Description" : "Základní nabídka programů",
             "Speed": "29 programů",
@@ -489,7 +489,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "TV_2_B",
+            "Id" : "tv2b",
             "Name" : "Zírám",
             "Description" : "Nabídka vhodná pro každého",
             "Speed": "63 programů",
@@ -518,7 +518,7 @@ globalServices = [
             ]
           },
           {
-            "Id" : "TV_2_C",
+            "Id" : "tv2c",
             "Name" : "Žasnu",
             "Description" : "Nabídka pro filmofily",
             "Speed": "105 programů",
@@ -551,19 +551,19 @@ globalServices = [
     ]
   },
   {
-    "Id" : "PHONE",
+    "Id" : "phone",
     "Name": "Telefon",
     "Css": "s3",
     "Description": "popis",
     "Tariffs": [
       {
-        "Id" : "PHONE_T1",
+        "Id" : "phonet1",
         "Name" : "Tlapnet GSM",
         "Description": "telefonování v síti GSM",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
           {
-            "Id" : "PHONE_1_A",
+            "Id" : "phone1a",
             "Name" : "Tlapnet Volám",
             "Description" : "telefonování v síti GSM",
             "Speed": "volné minuty v rámci sítě",
@@ -595,13 +595,13 @@ globalServices = [
         ]
       },              
       {
-        "Id" : "PHONE_T2",
+        "Id" : "phonet2",
         "Name" : "Tlapnet VoIP",
         "Description": "telefonování po síti",
         "Notice" : "Ceny jsou uvedeny s DPH.",
         "Packages": [
           {
-            "Id" : "PHONE_2_A",
+            "Id" : "phone2a",
             "Name" : "Tlapnet VoIP",
             "Description" : "telefonování po sítí",
             "Speed": "volání v rámci sítě",
@@ -611,22 +611,22 @@ globalServices = [
               {
                 "Type" : "BEZNA_CENA",
                 "Description" : "běžná cena",
-                "MonthlyPayment" : "0"
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE",
                 "Description" : "předplatné",
-                "MonthlyPayment" : "0"
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "BEZNA_CENA_V_BALICKU",
                 "Description" : "běžná cena balíčku",
-                "MonthlyPayment" : "0"
+                "MonthlyPayment" : "1"
               },
               {
                 "Type" : "PREDPLATNE_V_BALICKU",
                 "Description" : "předplatné v balíčku",
-                "MonthlyPayment" : "0"
+                "MonthlyPayment" : "1"
               }
             ]
           }                  
